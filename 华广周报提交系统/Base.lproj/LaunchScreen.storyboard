@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +18,41 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="启动页" translatesAutoresizingMaskIntoConstraints="NO" id="C4R-R5-kZn">
+                                <rect key="frame" x="0.0" y="0.0" width="369" height="595"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Copyright © 2016.HGSoftware. All rights reserved. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caV-zM-5oW">
+                                <rect key="frame" x="1" y="617" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="86C-tq-YYI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.17288395762443542" green="0.54134112596511841" blue="0.99852371215820312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="caV-zM-5oW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="EW3-h2-fRh"/>
+                            <constraint firstAttribute="trailing" secondItem="caV-zM-5oW" secondAttribute="trailing" id="Vz7-aj-UIh"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="caV-zM-5oW" secondAttribute="bottom" constant="32" id="bSk-jo-m2z"/>
+                            <constraint firstAttribute="trailing" secondItem="C4R-R5-kZn" secondAttribute="trailing" id="fxP-RH-YdK"/>
+                            <constraint firstItem="C4R-R5-kZn" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gyN-FC-ndt"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="C4R-R5-kZn" secondAttribute="bottom" id="nQh-hv-Ges"/>
+                            <constraint firstItem="C4R-R5-kZn" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="ofr-az-JHv"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="269.5" y="355.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="启动页" width="750" height="1334"/>
+    </resources>
 </document>

@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainTabBarController.h"
+#import "LoginViewController.h"
+#import "UserModel.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *username = [ud objectForKey:@"username"];
+     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    if (username) {
+        self.window.rootViewController = [MainTabBarController new];
+    }else{
+        self.window.rootViewController = [LoginViewController new];
+    }
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

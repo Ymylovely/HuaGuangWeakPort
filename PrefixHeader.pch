@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  HGIOS
+//
+//  Created by 孙 华 on 2016/10/26.
+//  Copyright © 2016年 hg. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define NAVI(vc) [[MainNavigationController alloc]initWithRootViewController:vc]
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import "HGUtils.h"
+#import <MBProgressHUD.h>
+#import <SVPullToRefresh.h>
+#import "HGUtils.h"
+#define YSW    ([UIScreen mainScreen].bounds.size.width)
+#define YSH    ([UIScreen mainScreen].bounds.size.height)
+#define kRGBA(r, g, b, a) ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
+#define MainColor ([UIColor colorWithRed:64/255.0 green:144/255.0 blue:182/255.0 alpha:1])
+// 登录
+#define URL_LoginPath @"http://www.huaguangsoft.com/hg_weekreport/app/login.do"
+// 发送帖子
+#define URL_SendWeekly @"http://www.huaguangsoft.com/hg_weekreport/app/publish.do"
+// 获取主题
+#define URL_GetTheme @"http://www.huaguangsoft.com/hg_weekreport/app/home.do"
+// 根据ID获取主题及回复
+#define URL_SearchTheme @"http://www.huaguangsoft.com/hg_weekreport/app/reportNote.do"
+// 修改帖子
+#define URL_EditTheme @"http://www.huaguangsoft.com/hg_weekreport/app/updateTheme.do"
+// 回复帖子
+#define URL_ReplyTheme @"http://www.huaguangsoft.com/hg_weekreport/app/speak.do"
+// 删除帖子
+#define URL_DeleteTheme @"http://www.huaguangsoft.com/hg_weekreport/app/deleteTheme.do"
+// 修改回复
+#define URL_EditReply @"http://www.huaguangsoft.com/hg_weekreport/app/updateReportNote.do"
+// 删除回复
+#define URL_DeleteReply @"http://www.huaguangsoft.com/hg_weekreport/app/deleteReportNote.do"
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
